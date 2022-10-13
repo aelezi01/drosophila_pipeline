@@ -1,23 +1,31 @@
+/*
 sample_info = Channel.fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet.csv").splitCsv(header:true)
+*/
 
 process genome_idx {
     
+    module 'STAR/2.7.9a-GCC-10.3.0'
+    module 'SAMtools/1.13-GCC-10.2.0'
+    
     scratch true 
+    publishDir "../data/genome/"
 
     input:
-
+        val species
+        val genome
+        val gtf
+        
     output:
-
+        path "${species}/genome_idx"
     script:
 
-    home="/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/genome_flybase/"
     """ 
     # run STAR for the indexing
     STAR --runThreadN 15 \
     --runMode genomeGenerate \
-    --genomeDir "${home}"/drosophila.erecta/genome_idx \
-    --genomeFastaFiles "${home}"/drosophila.erecta/drosophila_erecta.r1.05.sm.fa    \
-    --sjdbGTFfile "${home}"/drosophila.erecta/GCF_003285735.1_DvirRS2_genomic.gtf    \
+    --genomeDir "${species}"/genome_idx \
+    --genomeFastaFiles "${genome}"    \
+    --sjdbGTFfile "${gtf}"    \
     --sjdbOverhang 100 \
     --genomeSAindexNbases 12
     """
@@ -25,18 +33,23 @@ process genome_idx {
 
 
 process star {
+    
     module 'STAR/2.7.9a-GCC-10.3.0'
     module 'SAMtools/1.13-GCC-10.2.0'
     
     scratch true 
 
     input:
-        val metadata
+        val species
+        val genome_idx
+        val fastq_1
+        val fastq_2
+
     output:
-        *.bam
+        path "${outy}.bam"
     script:
     
-        gen = metadata["genome"]
+        gen = metadata["genome_idx"]
         fas1 = metadata["fastq_1"]
         fas2 = metadata["fastq_2"]
         outy = metadata["Sample"]

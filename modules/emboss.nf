@@ -7,7 +7,7 @@ process emboss {
     input:
         val metadata
     output:
-    
+        path "${species}_prot.fasta"
     script:
 
         species = metadata["species"]

@@ -8,6 +8,7 @@ process braker {
     scratch true
 
     input:
+        tuple val(species), val(gen), val(bam)
         val metadata
     output:
         path "${species}.gtf"

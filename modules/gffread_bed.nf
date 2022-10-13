@@ -7,7 +7,7 @@ process gffread_bed {
     input:
         val metadata
     output:
-        
+        path "${species}_filtered_nucl_allframes.fasta"
     script:
 
         species = metadata["species"]

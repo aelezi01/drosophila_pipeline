@@ -1,28 +1,48 @@
 #!/usr/bin/env nextflow
 
-sample_info =
+// import sample and species information from samplesheets 
+
+alignment_info = 
+    Channel
+        .fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet.csv")
+        .splitCsv(header:true)
+        .map{[ it , it["Sample"], it["genome"], it["gtf"], it["fastq_1"], it["fastq_2"]]}
+
+
+original_genome = alignment_info.map{it[0]["genome"]}.unique()
+gtf = alignment_info.map{it[0]["gtf"]}.unique()
+samples = alignment_info.map{it[0]["Sample"]}
+fastq_1 = alignment_info.map{it[0]["fastq_1"]}.unique()
+fastq_2 = alignment_info.map{it[0]["fastq_2"]}.unique()
+
+
+species_info =
     Channel
         .fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet_braker.csv")
         .splitCsv(header:true)
         .map{[ it , it["species"], it["genome"], it["bam"], it["gtf"]]}
 
-species = sample_info.map{it[0]["species"]}.unique()
-
-other_sample = 
-    Channel
-        .fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet.csv")
-        .splitCsv(header:true)
-        .map{[ it , it["species"], it["genome"], it["gtf"]]}
+species = species_info.map{it[0]["species"]}.unique()
+genome = species_info.map{it[0]["genome"]}.unique()
+bam = species_info.map{it[0]["bam"]}.unique()
+gtf = species_info.map{it[0]["gtf"]}.unique()
 
 
-genome = other_sample.map{it[0]["genome"]}.unique()
-gtf = other_sample.map{it[0]["gtf"]}.unique()
+// import individual processes
+
+include { genome_idx, star, merging_bam } from "./modules/alignment"
+include { braker } from "./modules/annotation"
+include { gffread_bed, cds_filtering, emboss } from "./modules/gtf_to_fasta"
+include { busco } from "./modules/busco"
+include { orthofinder } from "./modules/orthofinder"
 
 
-include { genome_idx } from "./modules/star"
+// run workflow
 
 workflow {
-    genome_idx(species, genome, gtf)
+    genome_idx(species, original_genome, gtf)
+    star(samples, genome_idx.out, fastq_1, fastq_2)
+    merging_bam(star.out, species)
 }
 
 /*

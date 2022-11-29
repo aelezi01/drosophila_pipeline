@@ -1,0 +1,64 @@
+Nov-29 17:05:56.805 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nextflow_main.nf
+Nov-29 17:05:56.948 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.3
+Nov-29 17:05:56.972 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/camp/home/elezia/.nextflow/plugins; core-plugins: nf-amazon@1.11.1,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.2
+Nov-29 17:05:56.992 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-29 17:05:56.993 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-29 17:05:56.998 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-29 17:05:57.011 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-29 17:05:57.077 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-29 17:05:57.086 [main] INFO  nextflow.cli.CmdRun - Launching `nextflow_main.nf` [astonishing_lorenz] DSL2 - revision: 4cb32f990d
+Nov-29 17:05:57.086 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-29 17:05:57.086 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-29 17:05:57.103 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /camp/home/elezia/.nextflow/secrets/store.json
+Nov-29 17:05:57.111 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4068102e] - activable => nextflow.secret.LocalSecretsProvider@4068102e
+Nov-29 17:05:57.189 [main] DEBUG nextflow.Session - Session UUID: 343c1ec7-6326-4e96-b30c-ca1fe68beca7
+Nov-29 17:05:57.189 [main] DEBUG nextflow.Session - Run name: astonishing_lorenz
+Nov-29 17:05:57.190 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-29 17:05:57.203 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-29 17:05:57.281 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.3 build 5835
+  Created: 21-11-2022 21:42 UTC (21:42 BST)
+  System: Linux 3.10.0-1160.62.1.el7.x86_64
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 11.0.2+9
+  Encoding: UTF-8 (UTF-8)
+  Process: 8968@babs000 [10.28.4.18]
+  CPUs: 32 - Mem: 251.1 GB (87.8 GB) - Swap: 8 GB (1.9 MB)
+Nov-29 17:05:57.333 [main] DEBUG nextflow.Session - Work-dir: /camp/stp/babs/scratch/elezia/nf_work [gpfs]
+Nov-29 17:05:57.334 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /camp/stp/babs/working/elezia/projects/godinol/juan.ramos/drosophila_pipeline/bin
+Nov-29 17:05:57.371 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, GoogleBatchExecutor]
+Nov-29 17:05:57.387 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-29 17:05:57.390 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Nov-29 17:05:57.414 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-29 17:05:57.428 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-29 17:05:57.527 [main] DEBUG nextflow.Session - Session start
+Nov-29 17:05:58.375 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-29 17:05:58.942 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-29 17:05:58.942 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-29 17:05:58.948 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-29 17:05:58.954 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=32; memory=251.1 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-29 17:05:59.066 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: merging_bam, star, genome_idx
+Nov-29 17:05:59.072 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Nov-29 17:05:59.079 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_idx
+Nov-29 17:05:59.080 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-29 17:05:59.080 [main] DEBUG nextflow.Session - Session await
+Nov-29 17:05:59.370 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-29 17:05:59.373 [Task submitter] INFO  nextflow.Session - [53/60a549] Submitted process > genome_idx (3)
+Nov-29 17:05:59.386 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-29 17:05:59.387 [Task submitter] INFO  nextflow.Session - [94/a05148] Submitted process > genome_idx (2)
+Nov-29 17:05:59.395 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-29 17:05:59.396 [Task submitter] INFO  nextflow.Session - [e2/fa93c6] Submitted process > genome_idx (5)
+Nov-29 17:05:59.405 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-29 17:05:59.406 [Task submitter] INFO  nextflow.Session - [d3/ba7185] Submitted process > genome_idx (1)
+Nov-29 17:05:59.415 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-29 17:05:59.416 [Task submitter] INFO  nextflow.Session - [5d/5df591] Submitted process > genome_idx (4)
+Nov-29 17:08:22.056 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: genome_idx (5); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/e2/fa93c6e49449b8f4cb707ae7e524bd]
+Nov-29 17:08:26.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: genome_idx (2); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/94/a051482e937c28653a461f0e327f29]
+Nov-29 17:08:34.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: genome_idx (4); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/5d/5df591847ddd537e06c65f0bd5f877]
+Nov-29 17:08:53.510 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: genome_idx (3); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/53/60a549b82d877ab64f009777689318]
+Nov-29 17:09:13.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: genome_idx (1); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/d3/ba7185a5973422331d52639ae1a050]
+Nov-29 17:09:13.653 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-29 17:09:13.737 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-29 17:09:13.744 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=5; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=13m 34s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=5; peakMemory=0; ]
+Nov-29 17:09:13.982 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-29 17:09:14.009 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-29 17:09:14.009 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

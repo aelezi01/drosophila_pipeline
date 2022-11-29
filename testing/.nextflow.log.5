@@ -1,0 +1,40 @@
+Nov-24 14:23:38.249 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Nov-24 14:23:38.423 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.0
+Nov-24 14:23:38.541 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [insane_mcclintock] DSL2 - revision: e278e4316d
+Nov-24 14:23:38.558 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/camp/home/elezia/.nextflow/plugins; core-plugins: nf-amazon@1.7.1,nf-azure@0.13.1,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Nov-24 14:23:38.562 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-24 14:23:38.584 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-24 14:23:38.585 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-24 14:23:38.589 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-24 14:23:38.601 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-24 14:23:38.666 [main] DEBUG nextflow.Session - Session uuid: 053e649a-d92d-4dab-88c2-9df596429524
+Nov-24 14:23:38.666 [main] DEBUG nextflow.Session - Run name: insane_mcclintock
+Nov-24 14:23:38.668 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-24 14:23:38.703 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.0 build 5697
+  Created: 23-04-2022 18:00 UTC (19:00 BST)
+  System: Linux 3.10.0-1160.62.1.el7.x86_64
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.2+9
+  Encoding: UTF-8 (UTF-8)
+  Process: 2615@babs001 [10.28.4.19]
+  CPUs: 32 - Mem: 251.1 GB (140.9 GB) - Swap: 8 GB (23.1 MB)
+Nov-24 14:23:38.732 [main] DEBUG nextflow.Session - Work-dir: /camp/stp/babs/scratch/elezia/nf_work [gpfs]
+Nov-24 14:23:38.733 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /camp/stp/babs/working/elezia/projects/godinol/juan.ramos/drosophila_pipeline/testing/bin
+Nov-24 14:23:38.742 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-24 14:23:38.754 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-24 14:23:38.775 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-24 14:23:38.789 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-24 14:23:38.933 [main] DEBUG nextflow.Session - Session start invoked
+Nov-24 14:23:39.790 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-24 14:23:40.152 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] splitCsv
+  [operator] map
+
+Nov-24 14:23:40.163 [main] ERROR nextflow.cli.Launcher - Module compilation error
+- file : /camp/stp/babs/working/elezia/projects/godinol/juan.ramos/drosophila_pipeline/testing/./f2.nf
+- cause: Unexpected character: '"' @ line 17, column 11.
+           """
+             ^
+
+1 error
+

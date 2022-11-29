@@ -1,0 +1,41 @@
+1) merge_bams (annotation file) 
+-> 
+i need to make sure that all samples associated with a certain species are included in the samtools merge command
+instead of only including 1 
+also need to make sure it picks the correct species for each sample it runs through
+
+2) nextflow test 
+->
+make sure that including multiple processes the way i have works
+
+3) check how to include module.out as an input in other processes 
+-> 
+do i need to do " val braker.out " ? 
+or just " braker.out "?
+or " val  ${species}.bam "
+
+4) should i put all the config paths together in the nf_test script?
+->
+will it know how to run it?
+
+5) inclusion of python script
+->
+need to parse the script as a channel or it wont know that i've changed the content of the file 
+so:
+script1 = Channel.fromPath("script.py")
+
+~
+to put together info from different channels using:
+channel.combine(file)
+	.filter( it[0]["species"] == it[2]["species"]) <- filter only stuff that the have the same value for the variable species
+	.map{ [ it[0], it[1] ]}
+	.set{ star_input }
+
+process star {
+	input:
+		tuple val(metadata), val(index), val(fastq)
+	shell:
+
+		"""
+		STAR $index $ $fastq
+		"""

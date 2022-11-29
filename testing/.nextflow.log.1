@@ -1,0 +1,75 @@
+Nov-24 14:28:59.838 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Nov-24 14:29:00.013 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.0
+Nov-24 14:29:00.121 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [nice_gutenberg] DSL2 - revision: e278e4316d
+Nov-24 14:29:00.136 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/camp/home/elezia/.nextflow/plugins; core-plugins: nf-amazon@1.7.1,nf-azure@0.13.1,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Nov-24 14:29:00.141 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-24 14:29:00.156 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-24 14:29:00.157 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-24 14:29:00.167 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-24 14:29:00.178 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-24 14:29:00.236 [main] DEBUG nextflow.Session - Session uuid: c63b9725-8657-4b33-af28-c1d1316855a5
+Nov-24 14:29:00.236 [main] DEBUG nextflow.Session - Run name: nice_gutenberg
+Nov-24 14:29:00.238 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-24 14:29:00.270 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.0 build 5697
+  Created: 23-04-2022 18:00 UTC (19:00 BST)
+  System: Linux 3.10.0-1160.62.1.el7.x86_64
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.2+9
+  Encoding: UTF-8 (UTF-8)
+  Process: 6609@babs001 [10.28.4.19]
+  CPUs: 32 - Mem: 251.1 GB (140.3 GB) - Swap: 8 GB (23.1 MB)
+Nov-24 14:29:00.300 [main] DEBUG nextflow.Session - Work-dir: /camp/stp/babs/scratch/elezia/nf_work [gpfs]
+Nov-24 14:29:00.301 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /camp/stp/babs/working/elezia/projects/godinol/juan.ramos/drosophila_pipeline/testing/bin
+Nov-24 14:29:00.310 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-24 14:29:00.322 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-24 14:29:00.346 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-24 14:29:00.359 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-24 14:29:00.481 [main] DEBUG nextflow.Session - Session start invoked
+Nov-24 14:29:01.227 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-24 14:29:01.650 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-24 14:29:01.650 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-24 14:29:01.655 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-24 14:29:01.661 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=32; memory=251.1 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-24 14:29:01.792 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-24 14:29:01.793 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-24 14:29:01.799 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fun1, fun2
+Nov-24 14:29:01.800 [main] DEBUG nextflow.Session - Ignite dataflow network (3)
+Nov-24 14:29:01.806 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fun1
+Nov-24 14:29:01.807 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fun2
+Nov-24 14:29:01.808 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-24 14:29:01.808 [main] DEBUG nextflow.Session - Session await
+Nov-24 14:29:02.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.029 [Task submitter] INFO  nextflow.Session - [0d/021351] Submitted process > fun1 (2)
+Nov-24 14:29:02.036 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.039 [Task submitter] INFO  nextflow.Session - [73/597456] Submitted process > fun1 (3)
+Nov-24 14:29:02.048 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.048 [Task submitter] INFO  nextflow.Session - [da/b26ef3] Submitted process > fun1 (1)
+Nov-24 14:29:02.056 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.056 [Task submitter] INFO  nextflow.Session - [7b/274ddb] Submitted process > fun1 (4)
+Nov-24 14:29:02.061 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.062 [Task submitter] INFO  nextflow.Session - [f0/3f1bf5] Submitted process > fun1 (5)
+Nov-24 14:29:02.090 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fun1 (1); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/da/b26ef3252f4e910a186e842572b122]
+Nov-24 14:29:02.123 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.124 [Task submitter] INFO  nextflow.Session - [fa/bd0ef5] Submitted process > fun2 (1)
+Nov-24 14:29:02.136 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: fun1 (2); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/0d/0213511e15c450c471919ecc46b39a]
+Nov-24 14:29:02.140 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fun1 (3); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/73/597456d6740db427692ce4b60435f3]
+Nov-24 14:29:02.146 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: fun1 (4); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/7b/274ddb0c05cda5d65da5ca3cffbf13]
+Nov-24 14:29:02.152 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: fun1 (5); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/f0/3f1bf5a21ce581ca191310f0b1677d]
+Nov-24 14:29:02.152 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.152 [Task submitter] INFO  nextflow.Session - [25/c3bfd9] Submitted process > fun2 (2)
+Nov-24 14:29:02.156 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: fun2 (1); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/fa/bd0ef5bbae9700b243cffd2f99182d]
+Nov-24 14:29:02.162 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.163 [Task submitter] INFO  nextflow.Session - [08/3633c6] Submitted process > fun2 (3)
+Nov-24 14:29:02.169 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.169 [Task submitter] INFO  nextflow.Session - [38/42ccde] Submitted process > fun2 (4)
+Nov-24 14:29:02.176 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-24 14:29:02.178 [Task submitter] INFO  nextflow.Session - [80/f5f3f3] Submitted process > fun2 (5)
+Nov-24 14:29:02.179 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: fun2 (2); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/25/c3bfd918156156fbee3d734f25e118]
+Nov-24 14:29:02.188 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: fun2 (3); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/08/3633c6ef00fe0852aeb13c060a2f70]
+Nov-24 14:29:02.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: fun2 (4); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/38/42ccde9c138d0c4f1025c49f404347]
+Nov-24 14:29:02.201 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: fun2 (5); status: COMPLETED; exit: 0; error: -; workDir: /camp/stp/babs/scratch/elezia/nf_work/80/f5f3f39a8e6f46d5ac5ce35fcbe9ec]
+Nov-24 14:29:02.202 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-24 14:29:02.203 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-24 14:29:02.211 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=10; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=279ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=5; peakMemory=0; ]
+Nov-24 14:29:02.344 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-24 14:29:02.397 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

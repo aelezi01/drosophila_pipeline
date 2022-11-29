@@ -1,0 +1,16 @@
+2022-11-29 15:35:10	-	zen_watson	-	32203c5b26e6c661fdf1b61e44d8a9d8	de6ac786-b788-4293-a922-02903444ba6d	nextflow run nextflow_main.nf
+2022-11-29 15:36:17	2.6s	dreamy_bhaskara	OK	70cc1ffa7c1ba5262bbfb9211b12539a	754ccc42-9a5f-4d31-8989-f4f11348060e	nextflow run nextflow_main.nf
+2022-11-29 15:36:30	-	nauseous_moriondo	-	22a673ea2c125008841fc4afa0199597	92b1df6b-8b9f-4e12-b0b3-29efc99489a5	nextflow run nextflow_main.nf
+2022-11-29 16:25:08	2.8s	maniac_magritte	OK	b4bca7ce57d72c2623a220dfae7fa97d	3b345884-0ccf-462a-b213-12f5f241b0fd	nextflow run nextflow_main.nf
+2022-11-29 16:26:12	2.6s	goofy_church	OK	01643c28e437f632edf75c00e76a1af7	3b8777a0-108a-41dc-870d-ddca3f74bde3	nextflow run nextflow_main.nf
+2022-11-29 16:27:44	2.1s	tiny_babbage	OK	d3e9bd20a69e35cd1c56e3a8633921ed	038265ed-99f8-4d84-8b2e-fddcf87d84dc	nextflow run nextflow_main.nf
+2022-11-29 16:30:22	1.9s	thirsty_golick	OK	3ab12eca6908439e4124b7c9810c3ea7	f16e1aac-84d3-4ee6-a02e-a698cae755e1	nextflow run nextflow_main.nf
+2022-11-29 16:36:28	-	golden_bohr	-	5d7fd27ad4ec127612e8b1d5a38dde95	dc1939af-2fbf-4556-a888-d54d04047bd8	nextflow run nextflow_main.nf
+2022-11-29 16:37:12	2.8s	confident_mccarthy	ERR	056f2d17db86b4c853fb3ef1814795f4	e64ca9ce-4d93-463b-8f62-e97d33ff564e	nextflow run nextflow_main.nf
+2022-11-29 16:37:43	2s	hungry_goldwasser	ERR	ea901e329cb59e7762e2949004824f6a	a27ae1ac-66e5-4470-ad7c-59c372b4a42f	nextflow run nextflow_main.nf
+2022-11-29 16:56:37	-	adoring_fermi	-	6f7a779836dfbe3202f3b3ee642d000f	a94dd462-c831-4910-91b0-fc26a56372ef	nextflow run nextflow_main.nf
+2022-11-29 16:57:42	2.2s	big_wescoff	OK	c3942144a7e7f5795ea457c50259ea82	bff45929-6748-4840-96e3-21f4149c34f9	nextflow run nextflow_main.nf
+2022-11-29 16:58:03	2.3s	intergalactic_yalow	OK	002f6e08354f7d952998b2ec2b323c3f	c1791f55-72c9-453e-8f8f-ec27d415571b	nextflow run nextflow_main.nf
+2022-11-29 17:01:40	2m 21s	sleepy_becquerel	ERR	4cb32f990da89086fcd2d1c981d6542c	210c97e3-e0fd-47e9-9968-614ac1ea43ca	nextflow run nextflow_main.nf
+2022-11-29 17:05:57	3m 17s	astonishing_lorenz	OK	4cb32f990da89086fcd2d1c981d6542c	343c1ec7-6326-4e96-b30c-ca1fe68beca7	nextflow run nextflow_main.nf
+2022-11-29 17:10:50	2m 1s	elated_meitner	ERR	4c7d59163b83236764454c43b88787f3	bfd35a48-756d-40af-a571-70357741f9df	nextflow run nextflow_main.nf

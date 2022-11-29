@@ -1,6 +1,3 @@
-sample_info = Channel.fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet_braker.csv").splitCsv(header:true)
-
-
 process braker {
     module 'BRAKER/2.1.6-intel-2019b-Python-3.7.4'
     module 'cdbfasta/0.99-GCC-8.3.0'
@@ -8,16 +5,14 @@ process braker {
 
     scratch true
 
+    publishDir "../data/run_*/braker/"
+
     input:
-        tuple val(species), val(gen), val(bam)
-        val metadata
+        val species
+        val genome
     output:
         path "${species}.gtf"
     script:
-
-        species = metadata["species"]
-        gen = metadata["genome"]
-        bam = metadata["bam"]
 
         AUGUSTUS_CONFIG_PATH="/camp/stp/babs/working/elezia/Augustus/config/"
         AUGUSTUS_SCRIPTS_PATH="/camp/stp/babs/working/elezia/Augustus/scripts/"

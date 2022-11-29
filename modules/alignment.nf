@@ -1,7 +1,3 @@
-/*
-sample_info = Channel.fromPath("/camp/stp/babs/working/elezia/projects/godinol/juan.ramos/data/input/RN19099_samplesheet.csv").splitCsv(header:true)
-*/
-
 process genome_idx {
     
     module 'STAR/2.7.9a-GCC-10.3.0'
@@ -11,21 +7,21 @@ process genome_idx {
     publishDir "../data/genome/"
 
     input:
-        val species
-        val original_genome
-        val gtf
+        val SPECIES
+        val ORIGINAL_GENOME
+        val GTF
         
     output:
-        path "${species}/genome_idx"
+        tuple val(SPECIES), path("${SPECIES}/genome_idx")
     script:
 
     """ 
-    # run STAR for the indexing
+    # run STAR for creating the genome index
     STAR --runThreadN 15 \
     --runMode genomeGenerate \
-    --genomeDir "${species}"/genome_idx \
-    --genomeFastaFiles "${original_genome}"    \
-    --sjdbGTFfile "${gtf}"    \
+    --genomeDir "${SPECIES}"/genome_idx \
+    --genomeFastaFiles "${ORIGINAL_GENOME}"    \
+    --sjdbGTFfile "${GTF}"    \
     --sjdbOverhang 100 \
     --genomeSAindexNbases 12
     """
@@ -38,7 +34,7 @@ process star {
     module 'SAMtools/1.13-GCC-10.2.0'
     
     scratch true 
-    publishDir "../data/run_*/star/"
+    publishDir "..", "data", saveAs: { filename -> "${workflow.runName}/star/${samples}.bam"} 
 
     input:
         val samples
@@ -71,7 +67,7 @@ process merging_bam {
     publishDir "../data/run_*/star/"
     
     input:
-        val star.out
+        tuple path(bam), val(species)
     output:
         path "${species}_sorted.bam"
     script:
